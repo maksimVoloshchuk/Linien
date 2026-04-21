@@ -12,27 +12,34 @@
 </head>
 <body>
 
-  <!-- ===== НАВИГАЦИЯ ===== -->
   <header class="site-header" id="top">
     <nav class="navbar">
       <div class="nav-logo">
         <span class="logo-main">LINIEN</span>
         <span class="logo-sub">MASSAGE AESTHETIC</span>
       </div>
-      <button class="nav-toggle" aria-label="Меню" id="navToggle">
-        <span></span><span></span><span></span>
-      </button>
+
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about">Über uns</a></li>
-        <li><a href="#specialist">Expertin</a></li>
-        <li><a href="#services">Leistungen</a></li>
-        <li><a href="#advantages">Vorteile</a></li>
-        <li><a href="#contact" class="nav-cta">Termin buchen</a></li>
+        <li><a href="#about" data-i18n="nav.about">Über uns</a></li>
+        <li><a href="#specialist" data-i18n="nav.specialist">Expertin</a></li>
+        <li><a href="#salon" data-i18n="nav.salon">Salon</a></li>
+        <li><a href="#services" data-i18n="nav.services">Leistungen</a></li>
+        <li><a href="#advantages" data-i18n="nav.advantages">Vorteile</a></li>
+        <li><a href="#contact" class="nav-cta" data-i18n="buttons.book">Termin buchen</a></li>
       </ul>
+
+      <div class="nav-tools">
+        <div class="lang-switch" aria-label="Language switcher">
+          <button type="button" class="lang-btn active" data-lang="de">DE</button>
+          <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        </div>
+        <button class="nav-toggle" aria-label="Меню" aria-expanded="false" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
-  <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
     <div class="hero-bg">
       <div class="hero-texture"></div>
@@ -40,7 +47,7 @@
       <div class="hero-drape hero-drape--right"></div>
     </div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Willkommen in Ihrer Oase</p>
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Willkommen in Ihrer Oase</p>
       <h1 class="hero-title">
         <span class="hero-title-main">LINIEN</span>
         <span class="hero-title-sub">MASSAGE AESTHETIC</span>
@@ -50,17 +57,16 @@
         <span class="divider-lotus">✦</span>
         <span class="divider-line"></span>
       </div>
-      <p class="hero-tagline">Körper · Harmonie · Balance · Linien</p>
-      <p class="hero-slogan">Dein Moment der Erneuerung</p>
-      <a href="#services" class="btn btn--light">Unsere Leistungen entdecken</a>
+      <p class="hero-tagline" data-i18n="hero.tagline">Körper · Harmonie · Balance · Linien</p>
+      <p class="hero-slogan" data-i18n="hero.slogan">Dein Moment der Erneuerung</p>
+      <a href="#services" class="btn btn--light" data-i18n="hero.cta">Unsere Leistungen entdecken</a>
     </div>
     <div class="hero-scroll-hint">
-      <span>Mehr entdecken</span>
+      <span data-i18n="hero.scroll">Mehr entdecken</span>
       <i class="fas fa-chevron-down"></i>
     </div>
   </section>
 
-  <!-- ===== О СТУДИИ ===== -->
   <section class="about section" id="about">
     <div class="container">
       <div class="about-grid">
@@ -69,29 +75,27 @@
             <div class="stone stone--lg"></div>
             <div class="stone stone--md"></div>
             <div class="stone stone--sm"></div>
-            <div class="candle-icon">
-              <div class="candle-body"></div>
-              <div class="candle-flame"></div>
-            </div>
           </div>
         </div>
         <div class="about-text">
-          <p class="section-label">Über uns</p>
-          <h2 class="section-title">Ihre Auszeit<br /><em>in vollkommener Ruhe</em></h2>
-          <p class="about-desc">LINIEN ist mehr als ein Massagestudio — es ist ein Raum für echte Erholung. Wir verbinden professionelle Massagetechniken mit einer harmonischen Atmosphäre, um Körper, Geist und Seele in Einklang zu bringen.</p>
-          <p class="about-desc">Jede Behandlung ist eine individuelle Reise zu Wohlbefinden und innerer Balance. Unsere erfahrenen Therapeuten begleiten Sie mit Sorgfalt und Hingabe.</p>
+          <p class="section-label" data-i18n="about.label">Über uns</p>
+          <h2 class="section-title" data-i18n="about.title">Ihre Auszeit<br /><em>in vollkommener Ruhe</em></h2>
+          <p class="about-desc" data-i18n="about.desc1">LINIEN ist mehr als ein Massagestudio — es ist ein Raum für echte Erholung. Wir verbinden professionelle Massagetechniken mit einer harmonischen Atmosphäre, um Körper, Geist und Seele in Einklang zu bringen.</p>
+          <p class="about-desc" data-i18n="about.desc2">Jede Behandlung ist eine individuelle Reise zu Wohlbefinden und innerer Balance. Unsere erfahrenen Therapeuten begleiten Sie mit Sorgfalt und Hingabe.</p>
           <div class="about-stats">
             <div class="stat">
+              <span class="stat-num">100%</span>
+              <span class="stat-label" data-i18n="about.stats.experience">individuelle Betreuung</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat">
               <span class="stat-num">4</span>
-              <span class="stat-label">Behandlungen</span>
+              <span class="stat-label" data-i18n="about.stats.treatments">Behandlungen</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat">
               <span class="stat-num">100%</span>
-              <span class="stat-label">Natürliche Produkte</span>
+              <span class="stat-label" data-i18n="about.stats.products">Natürliche Produkte</span>
             </div>
           </div>
         </div>
@@ -99,7 +103,6 @@
     </div>
   </section>
 
-  <!-- ===== СПЕЦИАЛИСТ ===== -->
   <section class="specialist section" id="specialist">
     <div class="container">
       <div class="specialist-grid" data-aos="fade-up">
@@ -107,24 +110,23 @@
           <div class="specialist-photo-wrap">
             <img src="assets/therapist-placeholder.jpg" alt="Massagetherapeutin von LINIEN" class="specialist-photo" />
           </div>
-          <p class="specialist-photo-note">Julia<strong></strong>.</p>
+          <p class="specialist-photo-note" data-i18n="specialist.note">Julia · Ihre persönliche Expertin.</p>
         </div>
         <div class="specialist-content">
-          <p class="section-label">Ihre Expertin</p>
-          <h2 class="section-title">Persönliche Betreuung<br /><em>mit ruhiger, professioneller Hand</em></h2>
-          <p class="section-desc specialist-desc">Damit Besucher sofort Vertrauen fassen, habe ich eine eigene Sektion für die Person ergänzt, die die Behandlungen durchführt. Hier können Sie später Foto, Name, kurze Vita, Zertifikate oder Spezialisierungen ergänzen.</p>
+          <p class="section-label" data-i18n="specialist.label">Ihre Expertin</p>
+          <h2 class="section-title" data-i18n="specialist.title">Persönliche Betreuung<br /><em>mit ruhiger, professioneller Hand</em></h2>
           <div class="specialist-highlights">
-            <div class="specialist-pill"><i class="fas fa-hand-holding-heart"></i><span>Individuelle Betreuung</span></div>
-            <div class="specialist-pill"><i class="fas fa-spa"></i><span>Sanfte Premium-Atmosphäre</span></div>
-            <div class="specialist-pill"><i class="fas fa-certificate"></i><span>Professionelle Technik</span></div>
+            <div class="specialist-pill"><i class="fas fa-hand-holding-heart"></i><span data-i18n="specialist.pill1">Individuelle Betreuung</span></div>
+            <div class="specialist-pill"><i class="fas fa-spa"></i><span data-i18n="specialist.pill2">Sanfte Premium-Atmosphäre</span></div>
+            <div class="specialist-pill"><i class="fas fa-certificate"></i><span data-i18n="specialist.pill3">Professionelle Technik</span></div>
           </div>
           <div class="specialist-card-inline">
-            <h3>Empfohlene Inhalte für dieses Profil</h3>
+            <h3 data-i18n="specialist.cardTitle">Empfohlene Inhalte für dieses Profil</h3>
             <ul class="specialist-list">
-              <li>Jullia Voloshchuk</li>
-              <li>Zertifikat</li>
-              <li>Spezialisierung auf Wellness, Honigmassage oder Anti-Cellulite</li>
-              <li>Mein Ziel ist Leichtigkeit, Entspannung und Wohlbefinden</li>
+              <li data-i18n="specialist.list1">Julia Voloshchuk</li>
+              <li data-i18n="specialist.list2">Zertifikate und Weiterbildungen</li>
+              <li data-i18n="specialist.list3">Spezialisierung auf Wellness-, Honig- oder Anti-Cellulite-Massage</li>
+              <li data-i18n="specialist.list4">Mein Ziel ist Leichtigkeit, Entspannung und Wohlbefinden</li>
             </ul>
           </div>
         </div>
@@ -132,212 +134,177 @@
     </div>
   </section>
 
-  <!-- ===== УСЛУГИ И ЦЕНЫ ===== -->
+  <section class="salon section" id="salon">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label" data-i18n="salon.label">Salon</p>
+        <h2 class="section-title" data-i18n="salon.title">Informationen über den <em>Behandlungsort</em></h2>
+      </div>
+
+      <div class="salon-grid">
+        <article class="salon-card" data-aos="fade-up">
+          <div class="salon-card__icon"><i class="fas fa-map-pin"></i></div>
+          <h3 data-i18n="salon.card1.title">Adresse & Anfahrt</h3>
+          <p data-i18n="salon.card1.text">Beschreiben Sie hier den genauen Eingang, Etage, Klingel, Parkmöglichkeiten oder öffentliche Verkehrsmittel.</p>
+        </article>
+
+        <article class="salon-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="salon-card__icon"><i class="fas fa-couch"></i></div>
+          <h3 data-i18n="salon.card2.title">Atmosphäre im Studio</h3>
+          <p data-i18n="salon.card2.text">Sanftes Licht, warme Farben und eine ruhige Umgebung schaffen eine Atmosphäre der Entspannung. 
+Jede Behandlung findet in einem gepflegten, stilvollen Raum statt, in dem Sie abschalten und neue Energie tanken können.</p>
+        </article>
+
+        <article class="salon-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="salon-card__icon"><i class="fas fa-circle-info"></i></div>
+          <h3 data-i18n="salon.card3.title">Wichtige Hinweise</h3>
+          <p data-i18n="salon.card3.text">Bitte erscheinen Sie pünktlich zu Ihrem Termin, um Ihre Behandlungszeit vollständig genießen zu können. 
+Zahlungen erfolgen vor Ort. Bei Verspätung kann sich die Behandlungsdauer verkürzen. 
+Begleitpersonen sind aus Rücksicht auf die Ruhe im Studio nicht vorgesehen.</p>
+        </article>
+      </div>
+
+      <div class="salon-note" data-i18n="salon.note">Tipp: Dieser Block eignet sich auch für Fotos des Salons, Hinweise zum Parken, einen Türcode oder Informationen zur ersten Behandlung.</div>
+    </div>
+  </section>
+
   <section class="services section" id="services">
     <div class="services-bg-texture"></div>
     <div class="container">
       <div class="section-header">
-        <p class="section-label">Preisliste</p>
-        <h2 class="section-title">Unsere <em>Leistungen</em></h2>
-        <p class="section-desc">Wählen Sie die perfekte Behandlung für Ihre Bedürfnisse</p>
+        <p class="section-label" data-i18n="services.label">Preisliste</p>
+        <h2 class="section-title" data-i18n="services.title">Unsere <em>Leistungen</em></h2>
+        <p class="section-desc" data-i18n="services.desc">Wählen Sie die perfekte Behandlung für Ihre Bedürfnisse</p>
       </div>
 
       <div class="services-grid">
-
-        <!-- Карточка 1 -->
-        <article class="service-card" data-aos="fade-up">
+        <article class="service-card" data-aos="fade-up" data-service-group="apparative" data-service-value="apparative45">
           <div class="service-card__icon">
             <i class="fas fa-spa"></i>
           </div>
-          <h3 class="service-card__title">Apparative Massage<br /><span>+ Body Wrap</span></h3>
-          <p class="service-card__subtitle">G5 + G8 Tiefen-Anti-Cellulite Massage</p>
+          <h3 class="service-card__title" data-service-title>Apparative Massage<br /><span>+ Body Wrap</span></h3>
+          <p class="service-card__subtitle" data-service-subtitle>G5 + G8 Tiefen-Anti-Cellulite Massage</p>
           <div class="service-card__divider"></div>
-          <div class="service-card__prices">
-            <div class="price-row">
-              <span class="price-duration">45 min</span>
-              <span class="price-dots"></span>
-              <span class="price-amount">40 €</span>
-            </div>
-            <div class="price-row">
-              <span class="price-duration">90 min</span>
-              <span class="price-dots"></span>
-              <span class="price-amount">65 €</span>
-            </div>
-          </div>
-          <a href="#contact" class="service-card__btn">Termin buchen</a>
+          <div class="service-card__prices" data-service-prices></div>
+          <a href="#contact" class="service-card__btn" data-i18n="buttons.book">Termin buchen</a>
         </article>
 
-        <!-- Карточка 2 -->
-        <article class="service-card service-card--featured" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-card__badge">Beliebt</div>
+        <article class="service-card service-card--featured" data-aos="fade-up" data-aos-delay="100" data-service-group="honey" data-service-value="honey45">
+          <div class="service-card__badge" data-i18n="services.popular">Beliebt</div>
           <div class="service-card__icon">
             <i class="fas fa-leaf"></i>
           </div>
-          <h3 class="service-card__title">Honigmassage<br /><span>+ Body Wrap</span></h3>
-          <p class="service-card__subtitle">Natürliche Entgiftung &amp; Tiefenpflege</p>
+          <h3 class="service-card__title" data-service-title>Honigmassage<br /><span>+ Body Wrap</span></h3>
+          <p class="service-card__subtitle" data-service-subtitle>Natürliche Entgiftung & Tiefenpflege</p>
           <div class="service-card__divider"></div>
-          <div class="service-card__prices">
-            <div class="price-row">
-              <span class="price-duration">45 min</span>
-              <span class="price-dots"></span>
-              <span class="price-amount">40 €</span>
-            </div>
-          </div>
-          <a href="#contact" class="service-card__btn">Termin buchen</a>
+          <div class="service-card__prices" data-service-prices></div>
+          <a href="#contact" class="service-card__btn" data-i18n="buttons.book">Termin buchen</a>
         </article>
 
-        <!-- Карточка 3 -->
-        <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <article class="service-card" data-aos="fade-up" data-aos-delay="200" data-service-group="wellness" data-service-value="wellness30">
           <div class="service-card__icon">
             <i class="fas fa-hand-sparkles"></i>
           </div>
-          <h3 class="service-card__title">Wellness<br /><span>Massage</span></h3>
-          <p class="service-card__subtitle">Entspannung für Körper und Geist</p>
+          <h3 class="service-card__title" data-service-title>Wellness<br /><span>Massage</span></h3>
+          <p class="service-card__subtitle" data-service-subtitle>Entspannung für Körper und Geist</p>
           <div class="service-card__divider"></div>
-          <div class="service-card__prices">
-            <div class="price-row">
-              <span class="price-duration">30 min <em>(2 Zonen)</em></span>
-              <span class="price-dots"></span>
-              <span class="price-amount">20 €</span>
-            </div>
-            <div class="price-row">
-              <span class="price-duration">60 min <em>(Ganzkörper)</em></span>
-              <span class="price-dots"></span>
-              <span class="price-amount">40 €</span>
-            </div>
-            <div class="price-row">
-              <span class="price-duration">90 min <em>(Ganzkörper)</em></span>
-              <span class="price-dots"></span>
-              <span class="price-amount">60 €</span>
-            </div>
-          </div>
-          <a href="#contact" class="service-card__btn">Termin buchen</a>
+          <div class="service-card__prices" data-service-prices></div>
+          <a href="#contact" class="service-card__btn" data-i18n="buttons.book">Termin buchen</a>
         </article>
 
-        <!-- Карточка 4 -->
-        <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <article class="service-card" data-aos="fade-up" data-aos-delay="300" data-service-group="cupping" data-service-value="cupping30">
           <div class="service-card__icon">
             <i class="fas fa-circle-notch"></i>
           </div>
-          <h3 class="service-card__title">Klassische Wellness<br /><span>Massage + Schröpfen</span></h3>
-          <p class="service-card__subtitle">Traditionelle Heilkunst mit Schröpfgläsern</p>
+          <h3 class="service-card__title" data-service-title>Klassische Wellness<br /><span>Massage + Schröpfen</span></h3>
+          <p class="service-card__subtitle" data-service-subtitle>Traditionelle Heilkunst mit Schröpfgläsern</p>
           <div class="service-card__divider"></div>
-          <div class="service-card__prices">
-            <div class="price-row">
-              <span class="price-duration">30 min <em>(2 Zonen)</em></span>
-              <span class="price-dots"></span>
-              <span class="price-amount">25 €</span>
-            </div>
-            <div class="price-row">
-              <span class="price-duration">60 min <em>(Ganzkörper)</em></span>
-              <span class="price-dots"></span>
-              <span class="price-amount">45 €</span>
-            </div>
-            <div class="price-row">
-              <span class="price-duration">90 min <em>(Ganzkörper)</em></span>
-              <span class="price-dots"></span>
-              <span class="price-amount">65 €</span>
-            </div>
-          </div>
-          <a href="#contact" class="service-card__btn">Termin buchen</a>
+          <div class="service-card__prices" data-service-prices></div>
+          <a href="#contact" class="service-card__btn" data-i18n="buttons.book">Termin buchen</a>
         </article>
-
       </div>
     </div>
   </section>
 
-  <!-- ===== ПРЕИМУЩЕСТВА ===== -->
   <section class="advantages section" id="advantages">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">Warum LINIEN</p>
-        <h2 class="section-title">Unser <em>Versprechen</em></h2>
+        <p class="section-label" data-i18n="advantages.label">Warum LINIEN</p>
+        <h2 class="section-title" data-i18n="advantages.title">Unser <em>Versprechen</em></h2>
       </div>
       <div class="advantages-grid">
         <div class="advantage-item">
-          <div class="advantage-icon">
-            <i class="fas fa-certificate"></i>
-          </div>
-          <h4>Zertifizierte Therapeuten</h4>
-          <p>Unsere Massagetherapeuten sind professionell ausgebildet und zertifiziert für alle angebotenen Behandlungen.</p>
+          <div class="advantage-icon"><i class="fas fa-certificate"></i></div>
+          <h4 data-i18n="advantages.card1.title">Zertifizierte Therapeuten</h4>
+          <p data-i18n="advantages.card1.text">Unsere Massagetherapeuten sind professionell ausgebildet und zertifiziert für alle angebotenen Behandlungen.</p>
         </div>
         <div class="advantage-item">
-          <div class="advantage-icon">
-            <i class="fas fa-seedling"></i>
-          </div>
-          <h4>Natürliche Produkte</h4>
-          <p>Wir verwenden ausschließlich hochwertige, natürliche Öle, Honig und Pflegeprodukte für Ihre Behandlungen.</p>
+          <div class="advantage-icon"><i class="fas fa-seedling"></i></div>
+          <h4 data-i18n="advantages.card2.title">Natürliche Produkte</h4>
+          <p data-i18n="advantages.card2.text">Wir verwenden ausschließlich hochwertige, natürliche Öle, Honig und Pflegeprodukte für Ihre Behandlungen.</p>
         </div>
         <div class="advantage-item">
-          <div class="advantage-icon">
-            <i class="fas fa-heart"></i>
-          </div>
-          <h4>Individuelle Betreuung</h4>
-          <p>Jede Behandlung wird individuell auf Ihre Bedürfnisse und Beschwerden abgestimmt.</p>
+          <div class="advantage-icon"><i class="fas fa-heart"></i></div>
+          <h4 data-i18n="advantages.card3.title">Individuelle Betreuung</h4>
+          <p data-i18n="advantages.card3.text">Jede Behandlung wird individuell auf Ihre Bedürfnisse und Beschwerden abgestimmt.</p>
         </div>
         <div class="advantage-item">
-          <div class="advantage-icon">
-            <i class="fas fa-moon"></i>
-          </div>
-          <h4>Harmonische Atmosphäre</h4>
-          <p>Unser Studio wurde als Wohlfühloase gestaltet — warmes Licht, sanfte Düfte, wohltuende Wärme.</p>
+          <div class="advantage-icon"><i class="fas fa-moon"></i></div>
+          <h4 data-i18n="advantages.card4.title">Harmonische Atmosphäre</h4>
+          <p data-i18n="advantages.card4.text">Unser Studio wurde als Wohlfühloase gestaltet — warmes Licht, sanfte Düfte, wohltuende Wärme.</p>
         </div>
         <div class="advantage-item">
-          <div class="advantage-icon">
-            <i class="fas fa-star"></i>
-          </div>
-          <h4>Premium Qualität</h4>
-          <p>Höchste Standards bei jedem Schritt — von der Buchung bis zur Nachbetreuung.</p>
+          <div class="advantage-icon"><i class="fas fa-star"></i></div>
+          <h4 data-i18n="advantages.card5.title">Premium Qualität</h4>
+          <p data-i18n="advantages.card5.text">Höchste Standards bei jedem Schritt — von der Buchung bis zur Nachbetreuung.</p>
         </div>
         <div class="advantage-item">
-          <div class="advantage-icon">
-            <i class="fas fa-clock"></i>
-          </div>
-          <h4>Flexible Zeiten</h4>
-          <p>Termine werden nach Ihrer Verfügbarkeit vereinbart — wir sind für Sie da, wann Sie uns brauchen.</p>
+          <div class="advantage-icon"><i class="fas fa-clock"></i></div>
+          <h4 data-i18n="advantages.card6.title">Flexible Zeiten</h4>
+          <p data-i18n="advantages.card6.text">Termine werden nach Ihrer Verfügbarkeit vereinbart — wir sind für Sie da, wann Sie uns brauchen.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== АТМОСФЕРА ===== -->
-  <section class="atmosphere section" id="atmosphere">
-    <div class="atmosphere-bg"></div>
-    <div class="container">
-      <div class="atmosphere-inner">
-        <p class="section-label" style="color: var(--stone-light);">Atmosphäre</p>
-        <h2 class="section-title atmosphere-title">Ein Ort der <em>Stille &amp; Schönheit</em></h2>
-        <p class="atmosphere-text">Betreten Sie unsere Welt der Ruhe und lassen Sie den Alltag hinter sich. LINIEN wurde als Rückzugsort geschaffen, an dem Schönheit und Wohlbefinden harmonisch verschmelzen. Weiche Texturen, warme Töne und die Stille des Raumes laden Sie ein, wirklich anzukommen.</p>
-        <div class="atmosphere-elements">
-          <div class="atm-el">
-            <div class="atm-stones">
-              <span class="atm-stone atm-stone--1"></span>
-              <span class="atm-stone atm-stone--2"></span>
-              <span class="atm-stone atm-stone--3"></span>
-            </div>
-            <p>Steine &amp; Wärme</p>
+<section class="atmosphere section" id="atmosphere">
+  <div class="atmosphere-bg"></div>
+  <div class="container">
+    <div class="atmosphere-inner">
+      <p class="section-label" style="color: var(--stone-light);" data-i18n="atmosphere.label">Atmosphäre</p>
+      <h2 class="section-title atmosphere-title" data-i18n="atmosphere.title">Ein Ort der <em>Stille &amp; Schönheit</em></h2>
+      <p class="atmosphere-text" data-i18n="atmosphere.text">
+        Betreten Sie unsere Welt der Ruhe und lassen Sie den Alltag hinter sich. LINIEN wurde als Rückzugsort geschaffen,
+        an dem Schönheit und Wohlbefinden harmonisch verschmelzen.
+      </p>
+
+      <div class="atmosphere-elements">
+        <div class="atm-el">
+          <div class="atm-stones">
+            <span class="atm-stone atm-stone--1"></span>
+            <span class="atm-stone atm-stone--2"></span>
+            <span class="atm-stone atm-stone--3"></span>
           </div>
-          <div class="atm-el">
-            <div class="atm-flame">
-              <div class="atm-candle"></div>
-            </div>
-            <p>Kerzenlicht</p>
-          </div>
-          <div class="atm-el">
-            <div class="atm-lotus">✿</div>
-            <p>Naturdüfte</p>
-          </div>
+          <p data-i18n="atmosphere.item1">Steine &amp; Wärme</p>
         </div>
-        <div class="atmosphere-motto">
-          <span class="divider-line"></span>
-          <p>Körper · Harmonie · Balance · Linien</p>
-          <span class="divider-line"></span>
+
+        <div class="atm-divider"></div>
+
+        <div class="atm-el">
+          <div class="atm-lotus" aria-hidden="true">✿</div>
+          <p data-i18n="atmosphere.item3">Naturdüfte</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ===== ПРИЗЫВ К ЗАПИСИ ===== -->
+      <div class="atmosphere-motto">
+        <span class="divider-line"></span>
+        <p data-i18n="hero.tagline">Körper · Harmonie · Balance · Linien</p>
+        <span class="divider-line"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
   <section class="booking-cta section" id="booking">
     <div class="container">
       <div class="cta-box">
@@ -346,12 +313,12 @@
           <span class="cta-stone cta-stone--sm"></span>
         </div>
         <div class="cta-content">
-          <p class="section-label">Bereit für Ihre Auszeit?</p>
-          <h2 class="cta-title">Dein Moment der<br /><em>Erneuerung</em> wartet</h2>
-          <p class="cta-desc">Gönnen Sie sich und Ihren Lieben das Geschenk der Ruhe. Vereinbaren Sie noch heute Ihren Wohlfühltermin bei LINIEN.</p>
+          <p class="section-label" data-i18n="cta.label">Bereit für Ihre Auszeit?</p>
+          <h2 class="cta-title" data-i18n="cta.title">Dein Moment der<br /><em>Erneuerung</em> wartet</h2>
+          <p class="cta-desc" data-i18n="cta.desc">Gönnen Sie sich und Ihren Lieben das Geschenk der Ruhe. Vereinbaren Sie noch heute Ihren Wohlfühltermin bei LINIEN.</p>
           <div class="cta-actions">
-            <a href="#contact" class="btn btn--primary">Termin vereinbaren</a>
-            <a href="#services" class="btn btn--outline">Leistungen ansehen</a>
+            <a href="#contact" class="btn btn--primary" data-i18n="cta.primary">Termin vereinbaren</a>
+            <a href="#services" class="btn btn--outline" data-i18n="cta.secondary">Leistungen ansehen</a>
           </div>
         </div>
         <div class="cta-decor cta-decor--right">
@@ -362,41 +329,40 @@
     </div>
   </section>
 
-  <!-- ===== КОНТАКТЫ ===== -->
   <section class="contact section" id="contact">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">Kontakt</p>
-        <h2 class="section-title">Kommen Sie <em>zu uns</em></h2>
+        <p class="section-label" data-i18n="contact.label">Kontakt</p>
+        <h2 class="section-title" data-i18n="contact.title">Kommen Sie <em>zu uns</em></h2>
       </div>
       <div class="contact-grid">
         <div class="contact-info">
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div>
-              <h4>Adresse</h4>
+              <h4 data-i18n="contact.addressTitle">Adresse</h4>
               <p>Nadorster Str. 77, 26123 Oldenburg</p>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-phone"></i></div>
             <div>
-              <h4>Telefon</h4>
+              <h4 data-i18n="contact.phoneTitle">Telefon</h4>
               <p><a href="tel:+4916092333865">+49 160 92333865</a></p>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
             <div>
-              <h4>E-Mail</h4>
+              <h4 data-i18n="contact.emailTitle">E-Mail</h4>
               <p><a href="mailto:julysik140196@gmail.com">julysik140196@gmail.com</a></p>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-clock"></i></div>
             <div>
-              <h4>Öffnungszeiten</h4>
-              <p>Mo – Fr: 09:00 – 20:00<br />Sa: 10:00 – 18:00<br />So: nach Vereinbarung</p>
+              <h4 data-i18n="contact.hoursTitle">Öffnungszeiten</h4>
+              <p data-i18n="contact.hoursValue">Mo – Fr: 09:00 – 20:00<br />Sa: 10:00 – 18:00<br />So: nach Vereinbarung</p>
             </div>
           </div>
           <div class="contact-socials">
@@ -405,58 +371,49 @@
             <a href="https://wa.me/4916092333865" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
+
         <div class="contact-form-wrap">
           <div class="booking-card-top" data-aos="fade-up">
             <div>
-              <span class="booking-mini-label">Online-Terminwahl</span>
-              <h3>Freie Zeiten direkt sehen</h3>
+              <span class="booking-mini-label" data-i18n="booking.topLabel">Online-Terminwahl</span>
+              <h3 data-i18n="booking.topTitle">Freie Zeiten direkt sehen</h3>
             </div>
-            <p>Verfügbare Termine werden sofort angezeigt. Bereits reservierte Zeiten erscheinen grau.</p>
+            <p data-i18n="booking.topText">Verfügbare Termine werden sofort angezeigt. Bereits reservierte Zeiten erscheinen grau.</p>
           </div>
+
           <form class="contact-form" id="contactForm" novalidate>
-            <h3>Termin anfragen</h3>
+            <h3 data-i18n="booking.formTitle">Termin anfragen</h3>
             <div class="form-group form-group--split">
               <div>
-                <label for="name">Ihr Name</label>
-                <input type="text" id="name" name="name" placeholder="Maria Müller" required />
+                <label for="name" data-i18n="booking.nameLabel">Ihr Name</label>
+                <input type="text" id="name" name="name" placeholder="Maria Müller" data-i18n-placeholder="booking.namePlaceholder" required />
               </div>
               <div>
-                <label for="phone">Telefon / WhatsApp</label>
-                <input type="tel" id="phone" name="phone" placeholder="+49 …" required />
+                <label for="phone" data-i18n="booking.phoneLabel">Telefon / WhatsApp</label>
+                <input type="tel" id="phone" name="phone" placeholder="+49 …" data-i18n-placeholder="booking.phonePlaceholder" required />
               </div>
             </div>
             <div class="form-group">
-              <label for="service">Gewünschte Behandlung</label>
-              <select id="service" name="service">
-                <option value="">Bitte wählen …</option>
-                <option>Apparative Massage + Body Wrap (45 min – 40 €)</option>
-                <option>Apparative Massage + Body Wrap (90 min – 65 €)</option>
-                <option>Honigmassage + Body Wrap (45 min – 40 €)</option>
-                <option>Wellness Massage (30 min – 20 €)</option>
-                <option>Wellness Massage (60 min – 40 €)</option>
-                <option>Wellness Massage (90 min – 60 €)</option>
-                <option>Klassische Wellness Massage + Schröpfen (30 min – 25 €)</option>
-                <option>Klassische Wellness Massage + Schröpfen (60 min – 45 €)</option>
-                <option>Klassische Wellness Massage + Schröpfen (90 min – 65 €)</option>
-              </select>
+              <label for="service" data-i18n="booking.serviceLabel">Gewünschte Behandlung</label>
+              <select id="service" name="service"></select>
             </div>
             <div class="form-group form-group--split">
               <div>
-                <label for="preferredDate">Wunschtermin</label>
+                <label for="preferredDate" data-i18n="booking.dateLabel">Wunschtermin</label>
                 <input type="date" id="preferredDate" name="preferredDate" required />
               </div>
               <div>
-                <label for="bookingTime">Gewählte Uhrzeit</label>
-                <input type="text" id="bookingTime" name="bookingTime" placeholder="Bitte unten wählen" readonly required />
+                <label for="bookingTime" data-i18n="booking.timeLabel">Gewählte Uhrzeit</label>
+                <input type="text" id="bookingTime" name="bookingTime" data-i18n-placeholder="booking.timePlaceholder" placeholder="Bitte unten wählen" readonly required />
               </div>
             </div>
             <div class="form-group">
               <div class="slot-picker">
                 <div class="slot-picker__head">
-                  <span>Verfügbare Zeiten</span>
+                  <span data-i18n="booking.availableTimes">Verfügbare Zeiten</span>
                   <div class="slot-legend">
-                    <span><i class="slot-legend__dot slot-legend__dot--free"></i>Frei</span>
-                    <span><i class="slot-legend__dot slot-legend__dot--busy"></i>Belegt</span>
+                    <span><i class="slot-legend__dot slot-legend__dot--free"></i><span data-i18n="booking.legendFree">Frei</span></span>
+                    <span><i class="slot-legend__dot slot-legend__dot--busy"></i><span data-i18n="booking.legendBusy">Belegt</span></span>
                   </div>
                 </div>
                 <div class="slot-grid" id="slotGrid"></div>
@@ -464,24 +421,23 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="message">Nachricht (optional)</label>
-              <textarea id="message" name="message" rows="4" placeholder="Ihre Wünsche, Hinweise oder Fragen …"></textarea>
+              <label for="message" data-i18n="booking.messageLabel">Nachricht (optional)</label>
+              <textarea id="message" name="message" rows="4" data-i18n-placeholder="booking.messagePlaceholder" placeholder="Ihre Wünsche, Hinweise oder Fragen …"></textarea>
             </div>
-            <button type="submit" class="btn btn--primary btn--full">Anfrage senden</button>
-            <p class="form-note">Nach dem Absenden wird der gewählte Zeitslot gespeichert, damit neue Besucher ihn als belegt sehen.</p>
+            <button type="submit" class="btn btn--primary btn--full" id="submitBookingBtn" data-i18n="booking.submit">Anfrage senden</button>
+            <p class="form-note" data-i18n="booking.formNote">Nach dem Absenden wird der gewählte Zeitslot gespeichert, damit neue Besucher ihn als belegt sehen.</p>
           </form>
+
           <div class="form-success" id="formSuccess">
             <i class="fas fa-check-circle"></i>
-            <h3>Danke für Ihre Anfrage!</h3>
-            <p>Ihr Terminwunsch wurde gespeichert. Wir melden uns schnellstmöglich bei Ihnen. <br /><em>Dein Moment der Erneuerung wartet.</em></p>
+            <h3 data-i18n="booking.successTitle">Danke für Ihre Anfrage!</h3>
+            <p id="successMessageText" data-i18n="booking.successDefault">Ihr Terminwunsch wurde gespeichert. Wir melden uns schnellstmöglich bei Ihnen.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-
-  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
@@ -491,15 +447,16 @@
         </div>
         <div class="footer-motto">
           <span>✦</span>
-          <p>Körper · Harmonie · Balance · Linien</p>
+          <p data-i18n="hero.tagline">Körper · Harmonie · Balance · Linien</p>
           <span>✦</span>
         </div>
         <nav class="footer-nav">
-          <a href="#about">Über uns</a>
-          <a href="#services">Leistungen</a>
-          <a href="#contact">Kontakt</a>
+          <a href="#about" data-i18n="nav.about">Über uns</a>
+          <a href="#salon" data-i18n="nav.salon">Salon</a>
+          <a href="#services" data-i18n="nav.services">Leistungen</a>
+          <a href="#contact" data-i18n="contact.label">Kontakt</a>
         </nav>
-        <p class="footer-copy">© 2026 LINIEN Massage Aesthetic. Alle Rechte vorbehalten.</p>
+        <p class="footer-copy" data-i18n="footer.copy">© 2026 LINIEN Massage Aesthetic. Alle Rechte vorbehalten.</p>
       </div>
     </div>
   </footer>
@@ -507,6 +464,7 @@
   <a href="#top" class="back-to-top" id="backToTop" aria-label="Nach oben">
     <i class="fas fa-chevron-up"></i>
   </a>
+
   <script type="module" src="js/booking.js"></script>
   <script src="js/main.js"></script>
 </body>

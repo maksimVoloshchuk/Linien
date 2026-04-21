@@ -468,31 +468,6 @@ em { font-style: italic; color: var(--gold-dark); }
 .stone--md { width: 80px;  height: 55px; bottom: 80px; left: 110px; transform: rotate(10deg); background: linear-gradient(135deg, var(--stone-dark) 0%, var(--brown) 100%); }
 .stone--sm { width: 55px;  height: 38px; bottom: 110px; left: 80px; transform: rotate(-5deg); background: linear-gradient(135deg, var(--stone-light) 0%, var(--stone) 100%); }
 
-.candle-icon {
-  position: absolute;
-  top: 35px;
-  left: 50%;
-  transform: translateX(-50%) scale(0.92);
-}
-
-.candle-body {
-  width: 22px;
-  height: 80px;
-  background: linear-gradient(180deg, var(--cream) 0%, var(--stone-light) 100%);
-  border-radius: 2px 2px 0 0;
-  margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(201, 169, 110, 0.3);
-}
-
-.candle-flame {
-  width: 12px;
-  height: 24px;
-  background: radial-gradient(ellipse at 50% 80%, #f9c74f 0%, #f77f00 55%, transparent 100%);
-  border-radius: 50% 50% 35% 35%;
-  margin: -3px auto 0;
-  animation: flicker 1.6s ease-in-out infinite alternate;
-  filter: blur(0.4px);
-}
 
 @keyframes flicker {
   0%   { transform: scaleX(1)   scaleY(1)    rotate(-2deg); opacity: 1; }
@@ -819,41 +794,54 @@ em { font-style: italic; color: var(--gold-dark); }
    ATMOSPHERE
    =========================== */
 .atmosphere {
-  background: linear-gradient(145deg, #3d2b20 0%, #5c3d2e 40%, #8e6a50 100%);
+  position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #5e3b29 0%, #8b654e 100%);
+  padding: 110px 0 90px;
 }
 
 .atmosphere-bg {
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(ellipse at 10% 90%, rgba(201,169,110,0.2) 0%, transparent 50%),
-    radial-gradient(ellipse at 90% 10%, rgba(245,240,232,0.06) 0%, transparent 50%);
-  z-index: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.04), transparent 30%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.03), transparent 25%),
+    linear-gradient(90deg, rgba(255,255,255,0.02), transparent 20%, rgba(255,255,255,0.015) 40%, transparent 60%);
+  pointer-events: none;
 }
 
-.atmosphere .container { position: relative; z-index: 1; }
+.atmosphere .container {
+  position: relative;
+  z-index: 1;
+}
 
 .atmosphere-inner {
   text-align: center;
-  max-width: 680px;
+  max-width: 760px;
   margin: 0 auto;
 }
 
-.atmosphere-title { color: var(--cream); margin-bottom: 28px; }
-.atmosphere-title em { color: var(--gold-light); }
+.atmosphere-title {
+  color: var(--cream);
+  margin-bottom: 28px;
+}
+
+.atmosphere-title em {
+  color: var(--gold-light);
+}
 
 .atmosphere-text {
-  color: rgba(245,240,232,0.75);
+  color: rgba(245, 240, 232, 0.78);
   font-weight: 300;
-  line-height: 1.85;
+  line-height: 1.9;
   margin-bottom: 56px;
 }
 
 .atmosphere-elements {
   display: flex;
   justify-content: center;
-  gap: 56px;
+  align-items: center;
+  gap: 42px;
   margin-bottom: 56px;
   flex-wrap: wrap;
 }
@@ -863,10 +851,23 @@ em { font-style: italic; color: var(--gold-dark); }
   flex-direction: column;
   align-items: center;
   gap: 14px;
-  color: rgba(245,240,232,0.6);
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
+  min-width: 160px;
+  color: rgba(245, 240, 232, 0.72);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.atm-el p {
+  margin: 0;
+}
+
+.atm-divider {
+  width: 1px;
+  height: 56px;
+  background: rgba(245, 240, 232, 0.22);
+  align-self: center;
 }
 
 .atm-stones {
@@ -877,79 +878,66 @@ em { font-style: italic; color: var(--gold-dark); }
 
 .atm-stone {
   position: absolute;
-  background: linear-gradient(135deg, var(--stone) 0%, var(--stone-dark) 100%);
   border-radius: 50%;
-  box-shadow: inset -2px -3px 6px rgba(0,0,0,0.2);
+  box-shadow: inset -2px -3px 6px rgba(0,0,0,0.18);
 }
 
-.atm-stone--1 { width: 36px; height: 24px; bottom: 0; left: 0; transform: rotate(-10deg); }
-.atm-stone--2 { width: 28px; height: 19px; bottom: 5px; left: 22px; transform: rotate(8deg); background: linear-gradient(135deg, var(--stone-dark), var(--brown)); }
-.atm-stone--3 { width: 20px; height: 13px; bottom: 18px; left: 10px; background: linear-gradient(135deg, var(--stone-light), var(--stone)); }
-
-.atm-flame {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+.atm-stone--1 {
+  width: 36px;
+  height: 24px;
+  bottom: 0;
+  left: 0;
+  transform: rotate(-10deg);
+  background: linear-gradient(135deg, var(--stone) 0%, #a49688 100%);
 }
 
-.atm-candle {
-  position: relative;
-  width: 18px;
-  height: 58px;
-  background: linear-gradient(180deg, #f8f4ee 0%, #ddd1c3 100%);
-  border-radius: 6px 6px 3px 3px;
+.atm-stone--2 {
+  width: 28px;
+  height: 19px;
+  bottom: 5px;
+  left: 22px;
+  transform: rotate(8deg);
+  background: linear-gradient(135deg, #8a7666 0%, #6e594b 100%);
 }
 
-.atm-candle::before {
-  content: '';
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 12px;
-  height: 16px;
-  background: radial-gradient(ellipse at 50% 75%, #ffd36b 0%, #ff9a1f 60%, transparent 100%);
-  border-radius: 50% 50% 35% 35%;
-  animation: flicker 1.8s ease-in-out infinite alternate;
-}
-
-.atm-candle::after {
-  content: '';
-  position: absolute;
-  top: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 8px;
-  background: #6b4b2a;
-  border-radius: 2px;
+.atm-stone--3 {
+  width: 20px;
+  height: 13px;
+  bottom: 18px;
+  left: 10px;
+  background: linear-gradient(135deg, var(--stone-light) 0%, var(--stone) 100%);
 }
 
 .atm-lotus {
-  font-size: 2.2rem;
-  color: var(--gold-light);
+  font-size: 2rem;
   line-height: 1;
-  filter: drop-shadow(0 0 8px rgba(201,169,110,0.5));
+  color: #e6d3aa;
+  filter: drop-shadow(0 0 8px rgba(230, 211, 170, 0.28));
+  transform: translateY(-1px);
 }
 
 .atmosphere-motto {
   display: flex;
   align-items: center;
-  gap: 24px;
   justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
-.atmosphere-motto .divider-line { background: rgba(245,240,232,0.25); width: 80px; }
+.atmosphere-motto .divider-line {
+  width: 74px;
+  height: 1px;
+  background: rgba(245, 240, 232, 0.22);
+}
 
 .atmosphere-motto p {
+  margin: 0;
   font-family: 'Jost', sans-serif;
-  font-weight: 200;
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
+  font-weight: 300;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(245,240,232,0.5);
+  color: rgba(245, 240, 232, 0.5);
 }
 
 /* ===========================
@@ -1738,11 +1726,24 @@ body {
 }
 
 .slot-button.is-busy {
-  background: #ece7df;
-  border-color: #ddd5c8;
-  color: #9b9082;
+  background: #d6cfc5;
+  border-color: #c5bbb0;
+  color: #7f766c;
   cursor: not-allowed;
-  opacity: 0.9;
+  opacity: 1;
+}
+
+.slot-button.is-busy:hover {
+  transform: none;
+  box-shadow: none;
+  background: #d6cfc5;
+}
+.slot-button.is-past {
+  background: #eee8e0;
+  border-color: #ddd4ca;
+  color: #a29a90;
+  cursor: not-allowed;
+  opacity: 0.8;
 }
 
 .slot-button.is-disabled {
@@ -1896,4 +1897,202 @@ body {
 }
 .atm-candle::before {
   top: -14px !important;
+}
+/* ===========================
+   2026 LANGUAGE / SALON / BOOKING FIXES
+   =========================== */
+
+.navbar {
+  gap: 18px;
+}
+
+.nav-links {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.nav-tools {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(245, 240, 232, 0.96);
+  border: 1px solid rgba(212, 201, 184, 0.9);
+  box-shadow: 0 8px 18px rgba(74, 58, 48, 0.08);
+}
+
+.lang-btn {
+  min-width: 46px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  transition: var(--transition);
+}
+
+.lang-btn.active {
+  background: var(--brown);
+  color: var(--cream);
+  box-shadow: 0 8px 18px rgba(74,58,48,0.16);
+}
+
+.lang-btn:hover {
+  color: var(--brown-dark);
+}
+
+.salon {
+  background: linear-gradient(180deg, #fffdfa 0%, #f4ede3 100%);
+}
+
+.salon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.salon-card {
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(212,201,184,0.7);
+  border-radius: 22px;
+  padding: 30px 26px;
+  box-shadow: 0 14px 30px rgba(110,80,50,0.08);
+  transition: var(--transition);
+}
+
+.salon-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-light);
+  box-shadow: 0 18px 34px rgba(110,80,50,0.14);
+}
+
+.salon-card__icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--cream-deep) 100%);
+  color: var(--gold-dark);
+  border: 1px solid rgba(212,201,184,0.8);
+  font-size: 1.2rem;
+}
+
+.salon-card h3 {
+  margin-bottom: 12px;
+}
+
+.salon-card p {
+  color: var(--text-mid);
+  font-weight: 300;
+}
+
+.salon-note,
+.contact-note {
+  margin-top: 20px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(212,201,184,0.72);
+  background: rgba(255,255,255,0.72);
+  color: var(--text-mid);
+  font-size: 0.9rem;
+}
+
+.contact-note {
+  margin-top: 2px;
+  margin-bottom: 16px;
+}
+
+.service-card__btn {
+  background: var(--brown);
+  color: var(--cream) !important;
+  border-color: var(--brown);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  box-shadow: 0 10px 22px rgba(74,58,48,0.14);
+}
+
+.service-card__btn:hover {
+  background: var(--brown-dark);
+  color: var(--cream) !important;
+}
+
+.nav-cta,
+.service-card__btn,
+.btn--primary {
+  text-shadow: 0 1px 0 rgba(0,0,0,0.08);
+}
+
+@keyframes steadyFlame {
+  0%, 100% {
+    transform: translateX(0) scaleX(1) scaleY(1);
+    opacity: 0.98;
+  }
+  50% {
+    transform: translateX(0) scaleX(0.97) scaleY(1.05);
+    opacity: 1;
+  }
+}
+
+.slot-button.is-past,
+.slot-button.is-disabled {
+  background: #f1ece4;
+  border-color: #e3dbce;
+  color: #b0a394;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+  .salon-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .navbar {
+    gap: 10px;
+  }
+
+  .nav-tools {
+    gap: 10px;
+  }
+
+  .lang-switch {
+    order: 1;
+  }
+
+  .nav-toggle {
+    order: 2;
+  }
+
+  .nav-links {
+    flex: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  .lang-btn {
+    min-width: 40px;
+    padding: 7px 10px;
+    font-size: 0.68rem;
+  }
+
+  .salon-card {
+    padding: 24px 18px;
+  }
+}
+.atm-flower span {
+  background: #e7d7b2;
+  box-shadow: 0 0 8px rgba(231, 215, 178, 0.4);
 }
