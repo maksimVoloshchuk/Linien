@@ -38,7 +38,7 @@ const translations = {
       }
     },
     specialist: {
-      note: 'Julia · Ihre persönliche Expertin.',
+      note: 'Yuliia · Ihre persönliche Expertin.',
       label: 'Ihre Expertin',
       title: 'Persönliche Betreuung<br /><em>mit ruhiger, professioneller Hand</em>',
       desc: 'Diese Sektion schafft sofort Vertrauen. Hier können Sie später Foto, Name, kurze Vita, Zertifikate und Spezialisierungen ergänzen.',
@@ -46,15 +46,15 @@ const translations = {
       pill2: 'Sanfte Premium-Atmosphäre',
       pill3: 'Professionelle Technik',
       cardTitle: 'Empfohlene Inhalte für dieses Profil',
-      list1: 'Julia Voloshchuk',
+      list1: 'Yuliia Voloshchuk',
       list2: 'Zertifikate und Weiterbildungen',
-      list3: 'Spezialisierung auf Wellness-, Honig- oder Anti-Cellulite-Massage',
+      list3: 'Spezialisierung auf Wellness-, Anti-Cellulite-Massage',
       list4: 'Mein Ziel ist Leichtigkeit, Entspannung und Wohlbefinden'
     },
 salon: {
   label: "Salon",
   title: "Informationen über den Behandlungsort",
-  desc: "Das Studio befindet sich im Salon Face of Art im 2. Stock. Ein ruhiger Ort, an dem Sie dem Alltag entfliehen und полностью entspannen können. Bei LINIEN erwartet Sie eine stilvolle Atmosphäre, in der Ihr Wohlbefinden im Mittelpunkt steht.",
+  desc: "Das Studio befindet sich im Salon Face of Art im 2. Stock. Ein ruhiger Ort, an dem Sie dem Alltag entfliehen und völlig entspannen können. Bei LINIEN erwartet Sie eine stilvolle Atmosphäre, in der Ihr Wohlbefinden im Mittelpunkt steht.",
   card1: {
     title: "Adresse & Zugang",
     text: "Das Studio befindet sich im Salon Face of Art im 2. Stock. Genauere Informationen zum Zugang erhalten Sie nach Ihrer Terminbuchung."
@@ -125,7 +125,7 @@ salon: {
       phoneTitle: 'Telefon',
       emailTitle: 'E-Mail',
       hoursTitle: 'Öffnungszeiten',
-      hoursValue: 'Mo – Fr: 09:00 – 20:00<br />Sa: 10:00 – 18:00<br />So: nach Vereinbarung',
+      hoursValue: 'Mo – Fr: 11:00 – 19:00<br />Sa: 11:00 – 19:00<br />So: nach Vereinbarung',
       note: 'Im neuen Salon-Bereich weiter oben können Sie zusätzlich Anfahrt, Parken, Klingel, Fotos und Hinweise vor dem Termin ergänzen.'
     },
     booking: {
@@ -210,7 +210,7 @@ salon: {
       cardTitle: 'Что можно указать в этом профиле',
       list1: 'Юлия Волощук',
       list2: 'Сертификаты и обучение',
-      list3: 'Специализация на wellness, медовом или антицеллюлитном массаже',
+      list3: 'Специализация на wellness, антицеллюлитном массаже',
       list4: 'Моя цель — лёгкость, расслабление и хорошее самочувствие'
     },
 salon: {
@@ -287,7 +287,7 @@ salon: {
       phoneTitle: 'Телефон',
       emailTitle: 'E-mail',
       hoursTitle: 'Часы работы',
-      hoursValue: 'Пн – Пт: 09:00 – 20:00<br />Сб: 10:00 – 18:00<br />Вс: по договорённости',
+      hoursValue: 'Пн – Пт: 11:00 – 19:00<br />Сб: 11:00 – 19:00<br />Вс: по договорённости',
       note: 'В новом блоке про салон выше можно дополнительно указать парковку, вход, домофон, фотографии и рекомендации перед визитом.'
     },
     booking: {
@@ -334,99 +334,180 @@ salon: {
 
 const serviceGroups = {
   de: {
-    apparative: {
-      title: 'Apparative Massage<br /><span>+ Body Wrap</span>',
-      subtitle: 'G5 + G8 Tiefen-Anti-Cellulite Massage',
-      prices: [
-        { duration: '45 min', amount: '40 €' },
-        { duration: '90 min', amount: '65 €' }
-      ]
-    },
-    honey: {
-      title: 'Honigmassage<br /><span>+ Body Wrap</span>',
-      subtitle: 'Natürliche Entgiftung & Tiefenpflege',
-      prices: [
-        { duration: '45 min', amount: '40 €' }
-      ]
-    },
     wellness: {
-      title: 'Wellness<br /><span>Massage</span>',
+      title: 'Klassische Wellness Massage',
       subtitle: 'Entspannung für Körper und Geist',
       prices: [
-        { duration: '30 min <em>(2 Zonen)</em>', amount: '20 €' },
-        { duration: '60 min <em>(Ganzkörper)</em>', amount: '40 €' },
-        { duration: '90 min <em>(Ganzkörper)</em>', amount: '60 €' }
+        { duration: '30 min – Zone nach Wahl', amount: '30 €' },
+        { duration: '60 min – Ganzkörper', amount: '50 €' },
+        { duration: '90 min – Ganzkörper', amount: '65 €' }
       ]
     },
-    cupping: {
-      title: 'Klassische Wellness<br /><span>Massage + Schröpfen</span>',
-      subtitle: 'Traditionelle Heilkunst mit Schröpfgläsern',
+
+    sport: {
+      title: 'Sportliche Regenerationsmassage',
+      subtitle: 'Vakuum, Schröpfen, G5 – für Männer',
       prices: [
-        { duration: '30 min <em>(2 Zonen)</em>', amount: '25 €' },
-        { duration: '60 min <em>(Ganzkörper)</em>', amount: '45 €' },
-        { duration: '90 min <em>(Ganzkörper)</em>', amount: '65 €' }
+        { duration: '30 min', amount: '40 €' },
+        { duration: '60 min', amount: '60 €' },
+        { duration: '90 min', amount: '80 €' }
+      ]
+    },
+
+    contour: {
+      title: 'Body Contouring',
+      subtitle: 'G5 + Body Wrap',
+      prices: [
+        { duration: '45 min', amount: '50 €' },
+        { duration: '90 min', amount: '70 €' }
+      ]
+    },
+
+    vakuum: {
+      title: 'Vakuum Massage & Schröpfen',
+      subtitle: 'Intensive Behandlung',
+      prices: [
+        { duration: '30 min', amount: '45 €' },
+        { duration: '60 min', amount: '55 €' }
+      ]
+    },
+
+    sculpt: {
+      title: 'Body Sculpting Premium',
+      subtitle: 'G5 + Vakuum + Body Wrap kalt & warm',
+      prices: [
+        { duration: '60 min', amount: '60 €' },
+        { duration: '90 min', amount: '80 €' }
+      ]
+    },
+
+    premium: {
+      title: 'Premium Full Body Treatment',
+      subtitle: 'Tiefenmassage + G5 + Vakuum + Body Wrap',
+      prices: [
+        { duration: '90 min', amount: '90 €' }
+      ]
+    },
+
+    extra: {
+      title: 'Zusatz',
+      subtitle: 'Body Wrap',
+      prices: [
+        { duration: 'Body Wrap', amount: '15 €' }
       ]
     }
   },
+
   ru: {
-    apparative: {
-      title: 'Аппаратный массаж<br /><span>+ Body Wrap</span>',
-      subtitle: 'G5 + G8 глубокий антицеллюлитный массаж',
-      prices: [
-        { duration: '45 мин', amount: '40 €' },
-        { duration: '90 мин', amount: '65 €' }
-      ]
-    },
-    honey: {
-      title: 'Медовый массаж<br /><span>+ Body Wrap</span>',
-      subtitle: 'Натуральный детокс и глубокий уход',
-      prices: [
-        { duration: '45 мин', amount: '40 €' }
-      ]
-    },
     wellness: {
-      title: 'Wellness<br /><span>массаж</span>',
-      subtitle: 'Расслабление для тела и ума',
+      title: 'Классический Wellness массаж',
+      subtitle: 'Расслабление для тела и души',
       prices: [
-        { duration: '30 мин <em>(2 зоны)</em>', amount: '20 €' },
-        { duration: '60 мин <em>(всё тело)</em>', amount: '40 €' },
-        { duration: '90 мин <em>(всё тело)</em>', amount: '60 €' }
+        { duration: '30 мин – зона на выбор', amount: '30 €' },
+        { duration: '60 мин – всё тело', amount: '50 €' },
+        { duration: '90 мин – всё тело', amount: '65 €' }
       ]
     },
-    cupping: {
-      title: 'Классический wellness<br /><span>массаж + банки</span>',
-      subtitle: 'Традиционный подход с вакуумными банками',
+
+    sport: {
+      title: 'Спортивный восстановительный массаж',
+      subtitle: 'Вакуум, банки, G5 – для мужчин',
       prices: [
-        { duration: '30 мин <em>(2 зоны)</em>', amount: '25 €' },
-        { duration: '60 мин <em>(всё тело)</em>', amount: '45 €' },
-        { duration: '90 мин <em>(всё тело)</em>', amount: '65 €' }
+        { duration: '30 мин', amount: '40 €' },
+        { duration: '60 мин', amount: '60 €' },
+        { duration: '90 мин', amount: '80 €' }
+      ]
+    },
+
+    contour: {
+      title: 'Body Contouring',
+      subtitle: 'G5 + обёртывание',
+      prices: [
+        { duration: '45 мин', amount: '50 €' },
+        { duration: '90 мин', amount: '70 €' }
+      ]
+    },
+
+    vakuum: {
+      title: 'Вакуумный массаж и банки',
+      subtitle: 'Интенсивное воздействие',
+      prices: [
+        { duration: '30 мин', amount: '45 €' },
+        { duration: '60 мин', amount: '55 €' }
+      ]
+    },
+
+    sculpt: {
+      title: 'Body Sculpting Premium',
+      subtitle: 'G5 + вакуум + обёртывание',
+      prices: [
+        { duration: '60 мин', amount: '60 €' },
+        { duration: '90 мин', amount: '80 €' }
+      ]
+    },
+
+    premium: {
+      title: 'Premium Full Body Treatment',
+      subtitle: 'Глубокий массаж + G5 + вакуум + обёртывание',
+      prices: [
+        { duration: '90 мин', amount: '90 €' }
+      ]
+    },
+
+    extra: {
+      title: 'Дополнительно',
+      subtitle: 'Обёртывание',
+      prices: [
+        { duration: 'Body Wrap', amount: '15 €' }
       ]
     }
   }
 };
-
 const serviceOptions = {
   de: [
-    { value: 'apparative45', label: 'Apparative Massage + Body Wrap (45 min – 40 €)' },
-    { value: 'apparative90', label: 'Apparative Massage + Body Wrap (90 min – 65 €)' },
-    { value: 'honey45', label: 'Honigmassage + Body Wrap (45 min – 40 €)' },
-    { value: 'wellness30', label: 'Wellness Massage (30 min – 20 €)' },
-    { value: 'wellness60', label: 'Wellness Massage (60 min – 40 €)' },
-    { value: 'wellness90', label: 'Wellness Massage (90 min – 60 €)' },
-    { value: 'cupping30', label: 'Klassische Wellness Massage + Schröpfen (30 min – 25 €)' },
-    { value: 'cupping60', label: 'Klassische Wellness Massage + Schröpfen (60 min – 45 €)' },
-    { value: 'cupping90', label: 'Klassische Wellness Massage + Schröpfen (90 min – 65 €)' }
+    { value: 'wellness30', label: 'Wellness Massage (30 min – 30 €)' },
+    { value: 'wellness60', label: 'Wellness Massage (60 min – 50 €)' },
+    { value: 'wellness90', label: 'Wellness Massage (90 min – 65 €)' },
+
+    { value: 'sport30', label: 'Sport Massage (30 min – 40 €)' },
+    { value: 'sport60', label: 'Sport Massage (60 min – 60 €)' },
+    { value: 'sport90', label: 'Sport Massage (90 min – 80 €)' },
+
+    { value: 'contour45', label: 'Body Contouring (45 min – 50 €)' },
+    { value: 'contour90', label: 'Body Contouring (90 min – 70 €)' },
+
+    { value: 'vakuum30', label: 'Vakuum & Schröpfen (30 min – 45 €)' },
+    { value: 'vakuum60', label: 'Vakuum & Schröpfen (60 min – 55 €)' },
+
+    { value: 'sculpt60', label: 'Body Sculpting (60 min – 60 €)' },
+    { value: 'sculpt90', label: 'Body Sculpting (90 min – 80 €)' },
+
+    { value: 'premium90', label: 'Premium Full Body (90 min – 90 €)' },
+
+    { value: 'wrap15', label: 'Body Wrap (+15 €)' }
   ],
+
   ru: [
-    { value: 'apparative45', label: 'Аппаратный массаж + Body Wrap (45 мин – 40 €)' },
-    { value: 'apparative90', label: 'Аппаратный массаж + Body Wrap (90 мин – 65 €)' },
-    { value: 'honey45', label: 'Медовый массаж + Body Wrap (45 мин – 40 €)' },
-    { value: 'wellness30', label: 'Wellness массаж (30 мин – 20 €)' },
-    { value: 'wellness60', label: 'Wellness массаж (60 мин – 40 €)' },
-    { value: 'wellness90', label: 'Wellness массаж (90 мин – 60 €)' },
-    { value: 'cupping30', label: 'Классический wellness массаж + банки (30 мин – 25 €)' },
-    { value: 'cupping60', label: 'Классический wellness массаж + банки (60 мин – 45 €)' },
-    { value: 'cupping90', label: 'Классический wellness массаж + банки (90 мин – 65 €)' }
+    { value: 'wellness30', label: 'Wellness массаж (30 мин – 30 €)' },
+    { value: 'wellness60', label: 'Wellness массаж (60 мин – 50 €)' },
+    { value: 'wellness90', label: 'Wellness массаж (90 мин – 65 €)' },
+
+    { value: 'sport30', label: 'Спортивный массаж (30 мин – 40 €)' },
+    { value: 'sport60', label: 'Спортивный массаж (60 мин – 60 €)' },
+    { value: 'sport90', label: 'Спортивный массаж (90 мин – 80 €)' },
+
+    { value: 'contour45', label: 'Body Contouring (45 мин – 55 €)' },
+    { value: 'contour90', label: 'Body Contouring (90 мин – 75 €)' },
+
+    { value: 'vakuum30', label: 'Вакуум и банки (30 мин – 45 €)' },
+    { value: 'vakuum60', label: 'Вакуум и банки (60 мин – 55 €)' },
+
+    { value: 'sculpt60', label: 'Body Sculpting (60 мин – 60 €)' },
+    { value: 'sculpt90', label: 'Body Sculpting (90 мин – 80 €)' },
+
+    { value: 'premium90', label: 'Premium Full Body (90 мин – 90 €)' },
+
+    { value: 'wrap15', label: 'Обёртывание (+15 €)' }
   ]
 };
 
